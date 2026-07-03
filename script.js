@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwplnQvfmeYWYb4T8c4GF3e9RQ00gEiO5YKY9uHEF77etXgCXABXC7K2R0rgdozbg2GXg/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFc0FUcKN4FnQCxcH1JfNuB9r_loDInqlyj1xbNtsSasFNzFvH3kUUWhqOn3xIpD9T5A/exec";
 
 const menu = [
   {id:1, category:'main', name:'5 цулийн будаатай хуурга', price:18000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
