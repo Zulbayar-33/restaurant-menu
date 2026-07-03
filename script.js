@@ -4,7 +4,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwplnQvfmeYWYb4T8c4G
 const menu = [
   {id:1, category:'main', name:'5 цулийн будаатай хуурга', price:18000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
   {id:2, category:'main', name:'Банштай цай', price:12000, desc:'Халуун банштай цай', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQitK3P-XjtoVI2UZnGVSloyTISrGYWOsmeX-Yg92kfDg&s=10'},
-  {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80'},
+  {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfKIntUc0qmPcICdKffhFvCozvEqjeiKHAfnDbuqE8KA&s'},
   {id:4, category:'main', name:'Үхрийн өвчүүтэй цуйван', price:32000, desc:'Үхрийн өвчүү, лууван, амтат чинжүү', img:'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=80'},
   {id:5, category:'main', name:'Үхрийн шарсан хавирга', price:60000, desc:'Төмс, лууван, будаа, үхрийн чөмөг', img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'},
   {id:6, category:'main', name:'Гэрийн хуушуур', price:18500, desc:'4 ширхэг', img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80'},
