@@ -1,7 +1,7 @@
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFc0FUcKN4FnQCxcH1JfNuB9r_loDInqlyj1xbNtsSasFNzFvH3kUUWhqOn3xIpD9T5A/exec";
 
 const menu = [
-  {id:1, category:'main', name:'5 цулийн будаатай хуурга', price:18000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
+  {id:1, category:'main', name:'5 цулын будаатай хуурга', price:18000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
   {id:2, category:'main', name:'Банштай цай', price:12000, desc:'Халуун банштай цай', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQitK3P-XjtoVI2UZnGVSloyTISrGYWOsmeX-Yg92kfDg&s=10'},
   {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://scontent.fuln6-3.fna.fbcdn.net/v/t39.30808-6/480919341_943615721280894_7939721243953598086_n.jpg?stp=dst-jpg_tt6&cstp=mx828x1792&ctp=s828x1792&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=SNzDWsJsSCsQ7kNvwEjsvjY&_nc_oc=AdofJmksZs3igBi-xEk5UqFzjXgv2ZKcJxBjchyYkP8vd1TH4p1qmjHTHtMkSZDab9U&_nc_zt=23&_nc_ht=scontent.fuln6-3.fna&_nc_gid=o0vvBWGLs0_kPTJyoUhR4g&_nc_ss=7b289&oh=00_AQA4gDBi-Pp91PWelpMAYCONFP2ccxGqIHLhXicYLEiYWg&oe=6A6E2E93'},
   {id:4, category:'main', name:'Үхрийн өвчүүтэй цуйван', price:32000, desc:'Үхрийн өвчүү, лууван, амтат чинжүү', img:'https://asiantoprecipes.weebly.com/uploads/5/3/4/0/5340076/tsuivan_orig.jpg'},
