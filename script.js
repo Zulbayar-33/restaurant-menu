@@ -1,7 +1,7 @@
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFc0FUcKN4FnQCxcH1JfNuB9r_loDInqlyj1xbNtsSasFNzFvH3kUUWhqOn3xIpD9T5A/exec";
 
 const menu = [
-  {id:1, category:'main', name:'5 цулын будаатай хуурга', price:18000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
+  {id:1, category:'main', name:'5 цулын будаатай хуурга', price:12000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
   {id:2, category:'main', name:'Банштай цай', price:12000, desc:'Халуун банштай цай', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQitK3P-XjtoVI2UZnGVSloyTISrGYWOsmeX-Yg92kfDg&s=10'},
   {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://scontent.fuln6-3.fna.fbcdn.net/v/t39.30808-6/480919341_943615721280894_7939721243953598086_n.jpg?stp=dst-jpg_tt6&cstp=mx828x1792&ctp=s828x1792&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=SNzDWsJsSCsQ7kNvwEjsvjY&_nc_oc=AdofJmksZs3igBi-xEk5UqFzjXgv2ZKcJxBjchyYkP8vd1TH4p1qmjHTHtMkSZDab9U&_nc_zt=23&_nc_ht=scontent.fuln6-3.fna&_nc_gid=o0vvBWGLs0_kPTJyoUhR4g&_nc_ss=7b289&oh=00_AQA4gDBi-Pp91PWelpMAYCONFP2ccxGqIHLhXicYLEiYWg&oe=6A6E2E93'},
   {id:4, category:'main', name:'Үхрийн өвчүүтэй цуйван', price:32000, desc:'Үхрийн өвчүү, лууван, амтат чинжүү', img:'https://asiantoprecipes.weebly.com/uploads/5/3/4/0/5340076/tsuivan_orig.jpg'},
@@ -11,8 +11,8 @@ const menu = [
   {id:8, category:'main', name:'Шарсан элэг', price:15000, desc:'Үхрийн элэг, хонины сүүл, будаа', img:'https://images.squarespace-cdn.com/content/v1/5e88044f6a6ffa7b2fe78f54/1617885903019-8R493OAYXFRU7QX0ALB4/Mongolian+food-+fried+liver.jpg'},
   {id:9, category:'main', name:'Далан давхар пицца', price:23500, desc:'Үхрийн өвчүү, моцарелла бяслаг', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLcRR9JhZKIQ5KCQ7vDENy0Fy1QGxAMQsdg949hf6iqtq4ek7eGFjjXk&s=10'},
   {id:10, category:'main', name:'Хуйхтай хорхог', price:58000, desc:'Төмс, лууван, давхраат бин', img:'https://correctmongolia.com/wp-content/uploads/2023/09/horhog-1.jpg'},
-  {id:11, category:'salad', name:'Хонины хэлэн зууш', price:13500, desc:'Өндөг, майонез, соус', img:'https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=900&q=80'},
-  {id:12, category:'salad', name:'Үхрийн гүзээний салат', price:14000, desc:'Амтат чинжүү, цоо байцаа, лууван', img:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80'},
+  {id:11, category:'salad', name:'Хонины хэлэн зууш', price:13500, desc:'Өндөг, майонез, соус', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9p0wggbNqWjrOI19hk6ZOF-C6RBtSIrfZdFfWuPEmGN7XXxV7yVuA7s&s=10'},
+  {id:12, category:'salad', name:'Үхрийн гүзээний салат', price:14000, desc:'Амтат чинжүү, цоо байцаа, лууван', img:'https://margaash.live/wp-content/uploads/2020/03/Uhriin-guzee-salat-amtat-hool-jor.jpg'},
   {id:13, category:'salad', name:'Хүрэн манжингийн салат', price:17500, desc:'Хушга, самар, үзэм, галант', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKmubLK80M4PdNbRLLMrEZF2idKsPodpxIMAfuR0VUsdfQv2iIynLmxpE&s=10'},
   {id:14, category:'salad', name:'Туургатан зууш', price:17500, desc:'Царцаамаг, үхрийн чөмөг, зөөхий', img:'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=900&q=80'},
   {id:15, category:'drink', name:'Цэвэр ус', price:2500, desc:'Ус', img:'https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=900&q=80'},
