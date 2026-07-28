@@ -20,7 +20,7 @@ const menu = [
   {id:17, category:'drink', name:'Жүүс', price:3000, desc:'Жүрж, алим, олон жимс', img:'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80'},
   {id:18, category:'drink', name:'Шейк', price:7000, desc:'Гүзээлзгэнэ, шоколад', img:'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80'},
   {id:19, category:'drink', name:'Смүүтий', price:13000, desc:'Хоргүйжүүлэх', img:'https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=900&q=80'},
-  {id:20, category:'drink', name:'Таван эрдэнийн цай', price:7500, desc:'Бор үзэм, долоогоно, хар чавга', img:'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80'},
+  {id:20, category:'drink', name:'Таван эрдэнийн цай', price:7500, desc:'Бор үзэм, долоогоно, хар чавга', img:'https://ikon.mn/lr/nvm'},
   {id:21, category:'drink', name:'Мөстэй цай', price:3000, desc:'Ice tea', img:'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&w=900&q=80'}
 ];
 
