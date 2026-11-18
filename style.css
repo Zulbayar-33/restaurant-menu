@@ -53,6 +53,7 @@ header p {
     max-width: 1000px;
 }
 
+/* Action Movable Card Physics & Smooth Motion */
 .menu-item {
     background-color: var(--card-bg);
     border-radius: var(--radius);
