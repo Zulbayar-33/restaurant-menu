@@ -44,26 +44,35 @@ function renderMenu() {
     f.name.toLowerCase().includes(q)
   );
 
-  grid.innerHTML = filtered.map(f => `
-    <div class="col-sm-6 col-lg-4">
-      <div class="card food-card">
+  document.getElementById('resultCount').textContent = filtered.length + ' хоол';
+
+  grid.innerHTML = filtered.map((f, idx) => `
+    <article class="food-card" style="--i:${idx}">
+      <div class="img-wrap">
         <img src="${f.img}" class="food-img" alt="${f.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=FALLBACK_IMG">
-        <div class="food-body">
-          <div class="d-flex justify-content-between gap-2">
-            <h5 class="food-title">${f.name}</h5>
-            <span class="price">${money(f.price)}</span>
-          </div>
-          <p class="food-desc">${f.desc}</p>
-          <button class="btn btn-primary add-btn w-100" onclick="addToCart(${f.id})">
-            Сагсанд нэмэх
-          </button>
-        </div>
+        <span class="price-tag">${money(f.price)}</span>
       </div>
-    </div>
+      <div class="food-body">
+        <h5 class="food-title">${f.name}</h5>
+        <p class="food-desc">${f.desc}</p>
+        <button class="btn add-btn w-100" onclick="addToCart(${f.id}, this)">
+          Сагсанд нэмэх
+        </button>
+      </div>
+    </article>
   `).join('');
 }
 
-function addToCart(id) {
+let toastTimer;
+function showToast(text) {
+  const t = document.getElementById('toast');
+  t.textContent = text;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+function addToCart(id, btn) {
   const food = menu.find(f => f.id === id);
   const found = cart.find(i => i.id === id);
 
@@ -71,6 +80,12 @@ function addToCart(id) {
   else cart.push({...food, qty: 1});
 
   renderCart();
+  showToast('✅ ' + food.name + ' сагсанд нэмэгдлээ');
+  if (btn) {
+    btn.classList.remove('added'); void btn.offsetWidth; btn.classList.add('added');
+  }
+  const badge = document.getElementById('cartCount');
+  badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
 }
 
 function changeQty(id, delta) {
