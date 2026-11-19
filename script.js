@@ -162,6 +162,12 @@ async function submitOrder() {
     const json = await res.json();
 
     if (json.success) {
+      saveMyOrder({
+        id: json.orderId,
+        items: cart.map(i => i.name + ' ×' + i.qty),
+        total: cart.reduce((sum, i) => sum + i.price * i.qty, 0),
+        status: 'Pending'
+      });
       cart = [];
       renderCart();
 
@@ -180,6 +186,65 @@ async function submitOrder() {
   }
 }
 
+/* ===== Order status tracking ===== */
+const STATUS = {
+  Pending:  { label: 'Хүлээгдэж байна', cls: 'st-pending',  icon: '⏳' },
+  Approved: { label: 'Зөвшөөрсөн',      cls: 'st-approved', icon: '✅' },
+  Rejected: { label: 'Татгалзсан',      cls: 'st-rejected', icon: '❌' }
+};
+
+let myOrders = [];
+try { myOrders = JSON.parse(localStorage.getItem('myOrders') || '[]'); } catch (e) { myOrders = []; }
+
+function persistOrders() {
+  try { localStorage.setItem('myOrders', JSON.stringify(myOrders)); } catch (e) {}
+}
+
+function saveMyOrder(order) {
+  myOrders.unshift(order);
+  myOrders = myOrders.slice(0, 5);
+  persistOrders();
+  renderMyOrders();
+}
+
+function renderMyOrders() {
+  const box = document.getElementById('myOrders');
+  if (!myOrders.length) {
+    box.innerHTML = '<p class="text-muted small">Захиалга алга байна.</p>';
+    return;
+  }
+  box.innerHTML = myOrders.map(o => {
+    const st = STATUS[o.status] || STATUS.Pending;
+    return `
+      <div class="order-card">
+        <div class="d-flex justify-content-between align-items-center gap-2">
+          <strong class="small">${o.id}</strong>
+          <span class="status-pill ${st.cls}">${st.icon} ${st.label}</span>
+        </div>
+        <div class="small text-muted mt-1">${o.items.join(', ')}</div>
+        <div class="small mt-1">Нийт: ${money(o.total)}</div>
+      </div>`;
+  }).join('');
+}
+
+async function refreshStatuses() {
+  let changed = false;
+  await Promise.all(myOrders.map(async o => {
+    try {
+      const res = await fetch(SCRIPT_URL + '?orderId=' + encodeURIComponent(o.id));
+      const json = await res.json();
+      if (json.success && json.status !== o.status) {
+        o.status = json.status;
+        changed = true;
+        if (STATUS[o.status] && o.status !== 'Pending') {
+          showToast(STATUS[o.status].icon + ' ' + o.id + ': ' + STATUS[o.status].label);
+        }
+      }
+    } catch (e) { /* offline or blocked: try again next tick */ }
+  }));
+  if (changed) { persistOrders(); renderMyOrders(); }
+}
+
 document.querySelectorAll('[data-category]').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
@@ -194,3 +259,6 @@ document.getElementById('submitBtn').addEventListener('click', submitOrder);
 
 renderMenu();
 renderCart();
+renderMyOrders();
+refreshStatuses();
+setInterval(() => { if (!document.hidden) refreshStatuses(); }, 8000);
