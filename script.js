@@ -21,8 +21,14 @@ const menu = [
   {id:18, category:'drink', name:'Шейк', price:7000, desc:'Гүзээлзгэнэ, шоколад', img:'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80'},
   {id:19, category:'drink', name:'Смүүтий', price:13000, desc:'Хоргүйжүүлэх', img:'https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=900&q=80'},
   {id:20, category:'drink', name:'Таван эрдэнийн цай', price:7500, desc:'Бор үзэм, долоогоно, хар чавга', img:'https://ikon.mn/lr/nvm'},
-  {id:21, category:'drink', name:'Мөстэй цай', price:3000, desc:'Ice tea', img:'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&w=900&q=80'}
+  {id:21, category:'drink', name:'Мөстэй цай', price:3000, desc:'Ice tea', img:'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&w=900&q=80'},
+  {id:22, category:'main', name:'Хуучин Стейк', price:28000, desc:'Шүүслэг шарж болгосон үхрийн мах амтлагч соусаар баяжуулсан.', img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'},
+  {id:23, category:'main', name:'Пепперони Пицца', price:24000, desc:'Халуун ногоотой пепперони хиам болон хайлсан бяслагтай.', img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80'}
 ];
+
+const FALLBACK_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="100%" height="100%" fill="#2a2a2a"/><text x="50%" y="50%" font-size="64" text-anchor="middle" dominant-baseline="middle">🍽️</text></svg>'
+);
 
 let activeCategory = 'all';
 let cart = [];
@@ -41,7 +47,7 @@ function renderMenu() {
   grid.innerHTML = filtered.map(f => `
     <div class="col-sm-6 col-lg-4">
       <div class="card food-card">
-        <img src="${f.img}" class="food-img" alt="${f.name}">
+        <img src="${f.img}" class="food-img" alt="${f.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=FALLBACK_IMG">
         <div class="food-body">
           <div class="d-flex justify-content-between gap-2">
             <h5 class="food-title">${f.name}</h5>
@@ -172,5 +178,4 @@ document.getElementById('searchInput').addEventListener('input', renderMenu);
 document.getElementById('submitBtn').addEventListener('click', submitOrder);
 
 renderMenu();
-renderCart();
 renderCart();
