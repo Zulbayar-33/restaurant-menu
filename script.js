@@ -3,7 +3,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFc0FUcKN4FnQCxcH1J
 const menu = [
   {id:1, category:'main', name:'5 цулын будаатай хуурга', price:12000, desc:'Амттай будаатай хуурга', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAr6BXCHT3mMDQDOgLUR55bYPUh_IcVzeW8uUUYeEuFA&s=10'},
   {id:2, category:'main', name:'Банштай цай', price:12000, desc:'Халуун банштай цай', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQitK3P-XjtoVI2UZnGVSloyTISrGYWOsmeX-Yg92kfDg&s=10'},
-  {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://scontent.fuln6-3.fna.fbcdn.net/v/t39.30808-6/480919341_943615721280894_7939721243953598086_n.jpg?stp=dst-jpg_tt6&cstp=mx828x1792&ctp=s828x1792&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=SNzDWsJsSCsQ7kNvwEjsvjY&_nc_oc=AdofJmksZs3igBi-xEk5UqFzjXgv2ZKcJxBjchyYkP8vd1TH4p1qmjHTHtMkSZDab9U&_nc_zt=23&_nc_ht=scontent.fuln6-3.fna&_nc_gid=o0vvBWGLs0_kPTJyoUhR4g&_nc_ss=7b289&oh=00_AQA4gDBi-Pp91PWelpMAYCONFP2ccxGqIHLhXicYLEiYWg&oe=6A6E2E93'},
+  {id:3, category:'main', name:'Хонины утсан шарсан толгой', price:26500, desc:'Төмс, лууван, сонгино, амтат чинжүү', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kelle_on_a_plate.jpg/960px-Kelle_on_a_plate.jpg'},
   {id:4, category:'main', name:'Үхрийн өвчүүтэй цуйван', price:32000, desc:'Үхрийн өвчүү, лууван, амтат чинжүү', img:'https://asiantoprecipes.weebly.com/uploads/5/3/4/0/5340076/tsuivan_orig.jpg'},
   {id:5, category:'main', name:'Үхрийн шарсан хавирга', price:60000, desc:'Төмс, лууван, будаа, үхрийн чөмөг', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-v8NBVnVO7ZmkoNypKoCwM56Ii1LHLinbY8KFxZeyy5oe8JyBRaORSC8Q&s=10'},
   {id:6, category:'main', name:'Гэрийн хуушуур', price:18500, desc:'4 ширхэг', img:'https://upload.wikimedia.org/wikipedia/commons/8/8d/MongoliaLastDay_153.JPG'},
@@ -20,7 +20,7 @@ const menu = [
   {id:17, category:'drink', name:'Жүүс', price:3000, desc:'Жүрж, алим, олон жимс', img:'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80'},
   {id:18, category:'drink', name:'Шейк', price:7000, desc:'Гүзээлзгэнэ, шоколад', img:'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80'},
   {id:19, category:'drink', name:'Смүүтий', price:13000, desc:'Хоргүйжүүлэх', img:'https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=900&q=80'},
-  {id:20, category:'drink', name:'Таван эрдэнийн цай', price:7500, desc:'Бор үзэм, долоогоно, хар чавга', img:'https://ikon.mn/lr/nvm'},
+  {id:20, category:'drink', name:'Таван эрдэнийн цай', price:7500, desc:'Бор үзэм, долоогоно, хар чавга', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Herbal_Tea_01.jpg/960px-Herbal_Tea_01.jpg'},
   {id:21, category:'drink', name:'Мөстэй цай', price:3000, desc:'Ice tea', img:'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&w=900&q=80'},
   {id:22, category:'main', name:'Хуучин Стейк', price:28000, desc:'Шүүслэг шарж болгосон үхрийн мах амтлагч соусаар баяжуулсан.', img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'},
   {id:23, category:'main', name:'Пепперони Пицца', price:24000, desc:'Халуун ногоотой пепперони хиам болон хайлсан бяслагтай.', img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80'}
